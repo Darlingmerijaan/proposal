@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friendship Proposal book</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body{
+            background-image: url("pexels-pixabay-269583.jpg");
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <div id="flipbook">
+        <!-- First page (rose animation) -->
+        <div class="page" id="page1">
+            <div class="rose-container">
+                <img src="rose.png" alt="Rose" id="rose">
+                <h1>kuch adhurii baatien</h1>
+                <button onclick="nextPage()">Next</button>
+            </div>
+        </div>
+
+        <!-- Second page (YouTube video) -->
+        <div class="page" id="page2">
+            <h1>Here’s a little tune for you...</h1>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/1-nnEM8chwo?si=FYyfrjOAgrZgRhr-"
+             title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
+              clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <button onclick="prevPage()">Back</button>
+            <button onclick="nextPage()">Next</button>
+        </div>
+
+        <!-- Third page (Surprise text) -->
+        <div class="page" id="page3">
+            <h1>Kuch labz...</h1>
+            <p> Tumhare aane se pahle mere dil kee.<br>
+            panne adhure the ,tumhe jab se dekha hai ek nayi
+        <br>kahani likhni shuru ho gyi
+    <br>bahut baar chaha ki tumhe sab kuch bta duu <br>
+    bas tumhare inkaar se darta thaa.. </p>
+            <button onclick="prevPage()">Back</button>
+            <button onclick="nextPage()">Next</button>
+        </div>
+
+        <!-- Fourth page (Shayari and compliment) -->
+        <div class="page" id="page4">
+            <h1>Shayari:</h1>
+            <p>Haaye tamannayein mere dil ki <br> tujhe bayan-e-ishq kar doon,
+                Dil mein chhupa har raaz ko hanste<br> rote tere saamne rakh doon.
+                Tu mile ya na mile mujhe,
+                Ishq zaahir toh hoga mera.
+                Tujhe ho ya na ho mohabbat mujhse,
+                Ek tarfa hi sahi, par shiddat se karunga</p>
+            <button onclick="prevPage()">Back</button>
+            <button onclick="nextPage()">Next</button>
+        </div>
+
+        <!-- Fifth page (Input box for thoughts) -->
+        <div class="page" id="page5">
+            <h1>Share your thoughts with me:</h1>
+            <textarea id="thoughts" placeholder="kuch baatien bolna chati ho ,sawal honge toh puch lo ,mai yani dilip tumhe jawab dene ke liye tyar huu"></textarea>
+            <button id="sendThoughts">Send</button>
+            <button onclick="prevPage()">Back</button>
+            <button onclick="returnToFirstPage()">Back to Start</button>
+            <div id="response" class="response"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

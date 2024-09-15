@@ -1,0 +1,96 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+#flipbook {
+    width: 600px;
+    height: 400px;
+    position: relative;
+    perspective: 1000px;
+}
+
+.page {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: left;
+    transition: transform 1s ease-in-out;
+    backface-visibility: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    z-index: 10;
+}
+
+#thoughts {
+    width: 80%;
+    height: 100px;
+    padding: 10px;
+    font-size: 1rem;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: darkblue;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: navy;
+}
+
+/* Style for specific pages */
+#page1 {
+    background-color: lightpink;
+    z-index: 5;
+}
+
+#page2, #page3, #page4 {
+    background-color: lightyellow;
+}
+
+#page5 {
+    background-color: lightblue;
+}
+
+.rose-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#rose {
+    width: 100px;
+    animation: roseAppear 3s forwards;
+    opacity: 0;
+}
+
+@keyframes roseAppear {
+    from { opacity: 0; transform: scale(0); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.response {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: green;
+}
